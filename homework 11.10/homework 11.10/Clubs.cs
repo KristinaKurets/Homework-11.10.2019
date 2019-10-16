@@ -4,11 +4,11 @@ using System.Text;
 
 namespace homework_11._10
 {
-    public class Clubs
+    public class Club
     {
-       public string Club { get; set; }
+       public string Name { get; set; }
        public string Head { get; set; }
-       public List<string> Members { get; set; }
+       public List<Tolchok> Members { get; set; }
 
 
     }
