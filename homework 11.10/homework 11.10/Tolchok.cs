@@ -4,7 +4,7 @@ using System.Text;
 
 namespace homework_11._10
 {
-    class Tolchok
+    public class Tolchok
     {
         public string Name { get; set; }
         public int Age { get { return Years(DateOfBirth, DateTime.Now); } }
