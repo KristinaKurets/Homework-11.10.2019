@@ -35,7 +35,7 @@ namespace homework_11._10
         static void BlackJack()
         {
 
-            int[] Deck = { 6, 7, 8, 9, 10, 2, 3, 4, 11 };
+            int[] Deck = {6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 11, 11, 11, 11};
             Console.WriteLine("You have to score 21 points.I’ll give you one card first.");
             Random rnd = new Random();
             int player1 = Deck[rnd.Next(0, Deck.Length)];
