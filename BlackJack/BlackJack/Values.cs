@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlackJack
 {
-    public enum Values
+    public enum CardValues
     {
       six = 6,
       seven = 7,
