@@ -7,8 +7,8 @@ namespace BlackJack
     public class Card
     {
         
-        public string Value { get; set; }
-        public string Suit { get; set; }
+        public CardValues Value { get; set; }
+        public CardSuits Suit { get; set; }
         public override string ToString()
         {
             return $"{Suit}:{Value}";
