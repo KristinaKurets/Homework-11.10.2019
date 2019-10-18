@@ -8,8 +8,8 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
+            //Creating deck
             var deck = new List<Card>();
-
             foreach (CardSuits SuitName in Enum.GetValues(typeof(CardSuits)))
             {
                 foreach (CardValues CardValue in Enum.GetValues(typeof(CardValues)))
@@ -17,10 +17,10 @@ namespace BlackJack
                     deck.Add(new Card { Suit = SuitName, Value = CardValue });
                 }
             }
-
+            //Shuffle deck:
             deck = deck.OrderBy(c => Guid.NewGuid()).ToList();
-            //deck.ForEach(Console.WriteLine);
-
+            
+            //Game:
             Card player1 = deck.ElementAt(0);
             Console.WriteLine($"Your card is {player1}");
             Card player2 = deck.ElementAt(1);
