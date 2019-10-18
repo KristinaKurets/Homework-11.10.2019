@@ -28,8 +28,25 @@ namespace homework_11._10
 
                 Console.WriteLine($"{ member.Name}, {member.Age} years old");
             }
-            Console.WriteLine($"Come on, {human.Name}, let's play BlackJack!");
-            BlackJack();
+            Console.WriteLine($"Okay {human.Name}, do you want to play BlackJack?'y' or 'n'");
+            string answer = "";
+            while ((answer!="n") || (answer !="y"))
+            {
+                answer = Console.ReadLine();
+                switch (answer)
+                {
+                    case "y":
+                        BlackJack();
+                        break;
+                     case "n":
+                        Console.WriteLine("Okay, bye");
+                        break;
+                     default:
+                        Console.WriteLine("Press 'y' or 'n':");
+                        break;
+
+                }
+            }
 
         }
         static void BlackJack()
