@@ -8,11 +8,11 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-            var deck = new List<Card>(36);
+            var deck = new List<Card>();
 
-            foreach (var SuitName in Enum.GetNames(typeof(Suits)))
+            foreach (CardSuits SuitName in Enum.GetValues(typeof(CardSuits)))
             {
-                foreach (var CardValue in Enum.GetNames(typeof(Values)))
+                foreach (CardValues CardValue in Enum.GetValues(typeof(CardValues)))
                 {
                     deck.Add(new Card { Suit = SuitName, Value = CardValue });
                 }
@@ -21,7 +21,7 @@ namespace BlackJack
             deck = deck.OrderBy(c => Guid.NewGuid()).ToList();
             //deck.ForEach(Console.WriteLine);
 
-            Card player1 = deck.;
+            Card player1 = deck.ElementAt(0);
             Console.WriteLine($"Your card is {player1}");
             Card player2 = deck.ElementAt(1);
         //    while (true)
